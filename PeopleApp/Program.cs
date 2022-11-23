@@ -65,6 +65,23 @@ WriteLine(format:"{0} of {1} was created at {2:hh:mm:ss} on a {2:dddd}.",
 (string,int) fruit = bob.GetFruit();
 WriteLine($"{fruit.Item1},{fruit.Item2} there are.");
 
+WriteLine(bob.SayHello());
+WriteLine(bob.SayHello("Rubo"));
 
+//ete parametri mej chgrenq ktpi defaulty grelu depqum mer gracy
+WriteLine(bob.OptionalParameters());
+WriteLine(bob.OptionalParameters(number:5.55, command:"Hide"));
 
+var sam = new Person
+{
+    Name = "Sam",
+    DateOfBirth = new DateTime(1972,1,27)
+};
+WriteLine(sam.Origin);
+WriteLine(sam.Greeting);
+WriteLine(sam.Age);
 
+sam.FavoriteIceCream = "Chokolate";
+WriteLine($"sams favorite ice is {sam.FavoriteIceCream}.");
+sam.FavoritePrimaryColor = "red";
+WriteLine($"sams favorite color  is {sam.FavoritePrimaryColor}.");
